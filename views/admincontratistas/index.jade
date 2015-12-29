@@ -1,0 +1,39 @@
+extends ../layout.jade
+block contenido
+	h1(class="text-center" class="espacio-arriba") Panel de Administración
+	div(class="form-group text-center" style="margin-top: 1em;")
+		a(href="/" class="btn btn-danger") FINALIZAR
+	div(class="col-md-10 center-block quitar-float")
+		input(id="buscar" type="text" class="form-control" placeholder="Escriba algo para filtrar")
+	div(class="col-md-11 col-sm-11 col-xs-11 center-block quitar-float table-responsive")
+		table(id="tabla" class="table table-striped success menor")
+			caption Estimaciones
+			thead
+				tr(class="info")
+					th Fecha
+					th Operación
+					th OEI
+					th OE
+					th PEP
+					th Constratista
+					th Acciones
+
+
+			tbody
+				each estimacion in estimacions
+					tr
+						td= estimacion.fecha
+						td= estimacion.operacion
+						td= estimacion.oei
+						td= estimacion.oe
+						td= estimacion.pep
+						td= estimacion.contratista
+						td
+							a(href="/menu/insertar/#{estimacion.id}" class="btn btn-primary menor") Trabajos
+							=( "   	" )
+							a(href="/pdf/#{estimacion.id}" class="btn btn-success menor") PDF
+							=( "   	" )
+							a(href="/menu/editar/#{estimacion.id}" class="btn btn-info menor") Editar
+							=( "   	" )
+							a(href="/menu/delete/#{estimacion.id}" class="btn btn-danger menor") Eliminar
+			script(type='text/javascript' src='/js/buscar.js')

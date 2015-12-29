@@ -1,0 +1,33 @@
+extends ../layout.jade
+block contenido
+	h1(class="text-center" class="espacio-arriba") Panel de Administración
+	div(class="form-group text-center" style="margin-top: 1em;")
+		a(href="/administradores" class="btn btn-danger") FINALIZAR
+	div(class="col-md-10 center-block quitar-float")
+		input(id="buscar" type="text" class="form-control" placeholder="Escriba algo para filtrar")
+	div(class="col-md-10 col-sm-10 col-xs-10 center-block quitar-float table-responsive")
+		table(id="tabla" class="table table-hover success menor")
+			caption Trabajos
+			thead
+				tr(class="info")
+					th Clave Unidad
+					th Descripción
+					th Unidad Medida
+					th Precio
+					th Tipo de Trabajo
+					th Acciones
+			tbody
+				each trabajo in trabajos
+					tr
+						td= trabajo.clave
+						td= trabajo.descripcion
+						td= trabajo.unidad_medida
+						td= trabajo.precio
+						td= trabajo.tipo_trabajo
+						td
+							a(href="/trabajos/editar/#{trabajo.id}" class="btn btn-success menor") Editar
+							=( "   	" )
+							a(href="/trabajos/eliminar/#{trabajo.id}" class="btn btn-danger menor") Eliminar
+
+		script(type='text/javascript' src='/js/buscar.js')
+//input(type="text" name="id" value="#{trabajo.id}" class="form-control" disabled)

@@ -1,0 +1,16 @@
+extends ../layout.jade
+block contenido
+	div(class="col-md-5 center-block quitar-float espacio-arriba text-left")
+		h1 Login Contratistas
+		form(method="POST" action="/admincontratistas" style="margin-top:1.5em;")
+			div(class="form-group")
+				label Contraseña
+				input(type="password" name="password" placeholder="Contraseña de Contratista" class="form-control" autofocus)
+			div(class="form-group text-right")
+				a(href="/" class="btn btn-danger") SALIR
+				=("    ")
+				input(type="submit" class="btn btn-info" value="Entrar")
+					
+
+
+

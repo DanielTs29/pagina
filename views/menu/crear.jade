@@ -1,0 +1,134 @@
+extends ../layout.jade
+block contenido
+	div(class="container")
+		div(class="row")
+			div(class="col-md-12")
+				div(class="col-md-11 center-block quitar-float text-left espacio-arriba")
+					h3 Agregar Estimación
+				div(class="container-fluid center-block quitar-float text-left")
+					hr
+					form(method="post" action="/menu" style="margin-top:1.5em;" class="form-horizontal" role="form")
+						div(class="row")
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="theDate" class="col-md-4 control-label menor2") Fecha:
+									div(class="col-md-8")
+										input(name="fecha" type="date" id="theDate" class="form-control")
+
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="operacion" class="col-md-4 control-label menor2") Operación:
+									div(class="col-md-8")
+										input(type="text" name="operacion" placeholder="Numero de Operación" class="form-control" id="operacion")
+
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="oei" class="col-md-4 control-label menor2") OEI:
+									div(class="col-md-8")
+										input(type="text" name="oei" placeholder="Numero de OEI" class="form-control" id="oei")
+
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="oe" class="col-md-4 control-label menor2") OE:
+									div(class="col-md-8")
+										input(type="text" name="oe" placeholder="Numero de OE" class="form-control" id="oe")
+
+
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="central" class="col-md-4 control-label menor2") Central:
+									div(class="col-md-8")
+										input(type="text" name="central" placeholder="Nombre Central" class="form-control" id="central")
+
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="pep" class="col-md-4 control-label menor2") PEP:
+									div(class="col-md-8")
+										input(type="text" name="pep" placeholder="Numero de PEP" class="form-control" id="pep")
+
+
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="dd" class="col-md-4 control-label menor2") DD:
+									div(class="col-md-8")
+										input(type="text" name="dd" placeholder="DD:" class="form-control" id="dd")
+
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="ruta" class="col-md-4 control-label menor2") Ruta:
+									div(class="col-md-8")
+										input(type="text" name="ruta" placeholder="No. de Ruta" class="form-control" id="ruta")
+								
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="enlace" class="col-md-4 control-label menor2") Enlace:
+									div(class="col-md-8")
+										input(type="text" name="enlace" placeholder="Enlace" class="form-control" id="enlace")
+
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="area" class="col-md-4 control-label menor2") Área:
+									div(class="col-md-8")
+										input(type="text" name="area" placeholder="Área" class="form-control" id="area")
+
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="poblacion" class="col-md-4 control-label menor2") Población:
+									div(class="col-md-8")
+										input(type="text" name="poblacion" placeholder="Población" class="form-control" id="poblacion")
+
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="tt" class="col-md-4 control-label menor2") Tipo de Trabajo:
+									div(class="col-md-8")
+										input(type="text" name="tipo_trabajo" placeholder="Tipo de Trabajo" class="form-control" id="tt")
+							
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="contratista" class="col-md-4 control-label menor2") Contratista:
+									div(class="col-md-8")
+										input(type="text" name="contratista" placeholder="Nombre Contratista" class="form-control" id="contratista")
+
+
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="fi" class="col-md-4 control-label menor2") Fecha Inicio:
+									div(class="col-md-8")
+										input(name="fecha_inicio" type="date"  class="form-control text-center" id="fi")
+
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="ft" class="col-md-4 control-label menor2") Fecha Terminación:
+									div(class="col-md-8")
+										input(name="fecha_terminacion" type="date"  class="form-control text-center" id="ft")
+
+
+							div(class="col-sm-6 col-lg-4")
+								div(class="form-group")
+									label(for="superintendente" class="col-md-4 control-label menor2") Superintendente:
+									div(class="col-md-8")
+										input(type="text" name="superintendente" placeholder="Nombre Superintendente" class="form-control" id="superintendente")
+
+							div(class="col-sm-12 col-lg-12")
+								div(class="form-group text-right" style="margin-top: 1em;")
+									div(class="col-md-12")
+										a(href="/" class="btn btn-danger") CANCELAR
+										=( "   	" )
+										input(type="submit" class="btn btn-info" value="Guardar")
+
+
+					
+
+										
+										
+	script(type='text/javascript').
+		var date = new Date();
+		var day = date.getDate();
+		var 
+		month = date.getMonth() + 1;
+
+		var year = date.getFullYear();
+		if (month < 10) month = "0" + month;
+		if (day < 10) day = "0" + day;
+		var today = year + "-" + month + "-" + day;
+		document.getElementById("theDate").value = today;

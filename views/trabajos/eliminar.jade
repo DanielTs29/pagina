@@ -1,0 +1,12 @@
+extends ../layout.jade
+block contenido
+	h4(class="text-center espacio-arriba") Eliminar Trabajo: #[span= trabajos.clave]
+	div(class="col-md-5 center-block quitar-float espacio-arriba-1 text-left")
+		form(method="POST" action="/trabajos/#{trabajos.id}?_method=delete" style="margin-top:1.5em;")
+			div(class="form-group")
+				label Contraseña
+				input(type="password" name="password" placeholder="Contraseña de Administrador" class="form-control" autofocus)
+			div(class="form-group text-right")
+				a(href="/administradores/_" class="btn btn-info") CANCELAR
+				=( "   	" )
+				input(type="submit" class="btn btn-danger" value="Eliminar")

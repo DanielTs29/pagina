@@ -1,0 +1,44 @@
+extends ../layout.jade
+block contenido
+	div(class="col-md-5 center-block quitar-float text-left espacio-arriba")
+		h3 Agregar Trabajos
+		form(method="post" action="/trabajos" style="margin-top:1.5em;")
+			div(class="form-group")
+				label Clave
+				input(type="text" name="clave" placeholder="No. Clave" class="form-control")
+
+			div(class="form-group")
+				label Descripción
+				textarea(type="text" name="descripcion" placeholder="Descripcion" class="form-control")
+			div(class="form-group")
+				label Unidad de Medida
+				input(type="text" name="unidad_medida" placeholder="Unidad de Medida" class="form-control")
+
+			div(class="form-group")
+				label Precio
+				input(type="text" name="precio" placeholder="$ Precio" class="form-control")
+
+			div(class="form-group")
+				label Tipo de Trabajo
+				select(type="text" name="tipo_trabajo" multiple class="form-control")
+					option Canalización
+					option Redes Planta Externa
+					option Desmontaje Planta Externa
+					option Fibra Óptica Urbana
+					option Fibra Óptica Rural, LD
+					option TBA´S
+					option Canalización Telnor
+					option Redes Telnor
+					option Fibra Óptica Telnor
+					option Canalización 10%
+					option Redes Planta Externa 10%
+					option Canalización Telnor 10%
+					option Redes Telnor 10%
+					option TBA´S Telnor
+					
+			div(class="form-group text-right" style="margin-top: 1em;")
+				a(href="/administradores/_" class="btn btn-danger") FINALIZAR
+				=( "   	" )
+				input(type="submit" class="btn btn-info" value="Guardar")
+
+	

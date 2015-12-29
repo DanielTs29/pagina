@@ -1,0 +1,31 @@
+extends ../layout.jade
+block contenido
+	div(class="col-md-5 center-block quitar-float text-left")
+		each i in datos
+			each item in i.trabajos
+				h4(class="text-center espacio-arriba") Editar Trabajo ##[span= item.id]
+				form(method="post" action="/menu/#{i._id}/#{item._id}?_method=put" style="margin-top:1.5em;")
+					div(class="form-group")
+						label Clave Unidad
+						input(type="text" name="clave" placeholder="Numero de clave" class="form-control" value="#{item.clave}")
+					div(class="form-group")
+						label Descripción
+						input(type="text" name="descripcion" placeholder="descripcion" class="form-control" value="#{item.descripcion}")
+
+					div(class="form-group")
+						label Unidad de Medida
+						input(type="text" name="unidad_medida" placeholder="Unidad de medida" class="form-control" value="#{item.unidad_medida}")
+
+					div(class="form-group")
+						label Cantidad Planificada
+						input(type="text" name="cantidad_planificada" placeholder="cantidad" class="form-control" value="#{item.cantidad_planificada}")
+
+					div(class="form-group")
+						label Precio
+						input(type="text" name="precio" placeholder="$" class="form-control" value="#{item.precio}")
+
+					div(class="form-group text-right" style="margin-top: 1em;")
+						a(href="javascript:history.back()" class="btn btn-danger") CANCELAR
+						=( "   	" )
+						input(type="submit" class="btn btn-info" value="Agregar")
+					

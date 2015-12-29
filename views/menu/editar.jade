@@ -1,0 +1,160 @@
+extends ../layout.jade
+block contenido
+	h4(class="text-center espacio-arriba" ) Editar Estimación ##[span= estimacions.id]
+	div(class="container")
+		br
+		div(class="row")
+			div(class="col-md-12")
+				div(role="tabpanel")
+					ul(class="nav nav-tabs" role="tablist")
+						li(role="presentation" class="active")
+							a(href="#seccion1" aria-controls="seccion1" data-toggle="tab" role="tab") Datos Estimación
+						li(role="presentation")
+							a(href="#seccion2" aria-controls="seccion2" data-toggle="tab" role="tab") Trabajos
+					div(class="tab-content")
+						div(role="tabpanel" class="tab-pane active" id="seccion1")
+							div(class="container-fluid center-block quitar-float text-left")
+								form(method="post" action="/menu/#{estimacions.id}?_method=put" style="margin-top:1.5em;" class="form-horizontal" role="form")
+									div(class="row")
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="theDate" class="col-md-4 control-label menor2") Fecha:
+												div(class="col-md-8")
+													input(name="fecha" type="date" id="theDate" class="form-control")
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="operacion" class="col-md-4 control-label menor2") Operación:
+												div(class="col-md-8")
+													input(type="text" value="#{estimacions.operacion}" name="operacion" placeholder="Numero de Operación" class="form-control" id="operacion")
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="oei" class="col-md-4 control-label menor2") OEI
+												div(class="col-md-8")
+													input(type="text" value="#{estimacions.oei}" name="oei" placeholder="Numero de OEI" class="form-control" id="oei")
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="oe" class="col-md-4 control-label menor2") OE:
+												div(class="col-md-8")
+													input(type="text" value="#{estimacions.oe}" name="oe" placeholder="Numero de OE" class="form-control" id="oe")
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="central" class="col-md-4 control-label menor2") Central:
+												div(class="col-md-8")
+													input(type="text" value="#{estimacions.central}" name="central" placeholder="Nombre Central" class="form-control" id="central")
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="pep" class="col-md-4 control-label menor2") PEP:
+												div(class="col-md-8")
+													input(type="text" value="#{estimacions.pep}" name="pep" placeholder="Numero de PEP" class="form-control" id="pep")
+
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="dd" class="col-md-4 control-label menor2") DD:
+												div(class="col-md-8")
+													input(type="text" value="#{estimacions.dd}" name="dd" placeholder="DD:" class="form-control" id="dd")
+										
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="ruta" class="col-md-4 control-label menor2") Ruta:
+												div(class="col-md-8")
+													input(type="text" value="#{estimacions.ruta}" name="ruta" placeholder="No. de Ruta" class="form-control" id="ruta")
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="enlace" class="col-md-4 control-label menor2") Enlace:
+												div(class="col-md-8")
+													input(type="text" value="#{estimacions.enlace}" name="enlace" placeholder="Enlace" class="form-control" id="enlace")
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="area" class="col-md-4 control-label menor2") Área:
+												div(class="col-md-8")
+													input(type="text" value="#{estimacions.area}" name="area" placeholder="Área" class="form-control" id="area")
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="poblacion" class="col-md-4 control-label menor2") Población:
+												div(class="col-md-8")
+													input(type="text" value="#{estimacions.poblacion}" name="poblacion" placeholder="Población" class="form-control" id="poblacion")
+
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="tt" class="col-md-4 control-label menor2") Tipo de Trabajo:
+												div(class="col-md-8")
+													input(type="text" value="#{estimacions.tipo_de_trabajo}" name="tipo_de_trabajo" placeholder="Tipo de Trabajo" class="form-control" id="tt")
+
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="contratista" class="col-md-4 control-label menor2") Contratista:
+												div(class="col-md-8")
+													input(type="text" value="#{estimacions.contratista}" name="contratista" placeholder="Nombre Contratista" class="form-control" id="contratista")
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="fi" class="col-md-4 control-label menor2") Fecha Inicio:
+												div(class="col-md-8")
+													input(name="fecha_inicio" value="#{estimacions.fecha_inicio}" type="date"  class="form-control text-center" id="fi")
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="ft" class="col-md-4 control-label menor2") Fecha Terminación:
+												div(class="col-md-8")
+													input(name="fecha_terminacion" value="#{estimacions.fecha_terminacion}" type="date"  class="form-control text-center" id="ft") 
+
+										div(class="col-sm-6 col-lg-4")
+											div(class="form-group")
+												label(for="superintendente" class="col-md-4 control-label menor2") Superintendente:
+												div(class="col-md-8")
+													input(type="text" value="#{estimacions.superintendente}" name="superintendente" placeholder="Nombre Superintendente" class="form-control" id="superintendente")
+										
+										div(class="col-sm-12 col-lg-12")
+											div(class="form-group text-right" style="margin-top: 1em;")
+												div(class="col-md-12")
+													a(href="/admincontratistas/_" class="btn btn-danger") FINALIZAR
+													=( "   	" )
+													input(type="submit" class="btn btn-info" value="Guardar")
+																
+						div(role="tabpanel" class="tab-pane" id="seccion2")
+							br
+							div(class="col-md-10 center-block quitar-float")
+								input(id="buscar" type="text" class="form-control" placeholder="Escriba algo para filtrar")
+							div(class="col-md-12 col-sm-12 col-xs-12 center-block quitar-float table-responsive")
+								table(id="tabla" class="table table-striped success menor")
+									caption Trabajos
+									thead
+										tr(class="success")
+											th Clave
+											th Descripcion
+											th Unidad de Medida
+											th Cantidad Planificada
+											th Precio
+											th Importe
+											th Acciones
+											th
+									tbody
+										each i in estimacions.trabajos
+											tr
+												td #{i.clave}
+												td #{i.descripcion}
+												td #{i.unidad_medida}
+												td #{i.cantidad_planificada}
+												td #{i.precio}
+												td #{i.importe}
+												td(ALIGN="right")
+													a(href="/menu/editar/#{estimacions._id}/#{i._id}"  class="btn btn-info menor") EDITAR
+												td(ALIGN="left")
+													form(method="post" action="/eliminar-trabajo/#{estimacions.id}/#{i._id}?_method=delete")
+														input(type="submit" value="eliminar" class="btn btn-danger menor")
+													
+			
+	script(type='text/javascript' src='/js/fecha.js')
+	script(type='text/javascript' src='/js/buscar.js')
+

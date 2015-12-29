@@ -1,0 +1,37 @@
+extends ../layout.jade
+block contenido
+	h4(class="text-center espacio-arriba") Agregar Valores Estimación ##[span= estimacions.id]
+	div(class="form-group text-center" style="margin-top: 1em;")
+		a(href="/admincontratistas/_" class="btn btn-danger") FINALIZAR
+	div(class="col-md-10 center-block quitar-float")
+		input(id="buscar" type="text" class="form-control" placeholder="Escriba algo para filtrar")
+	div(class="col-md-12 col-sm-12 col-xs-12 center-block quitar-float table-responsive")
+		table(id="tabla" class="table table-hover success menor")
+			caption Trabajos
+			thead
+				tr(class="info")
+					th Clave Unidad
+					th Tipo de Trabajo
+					th Descripción
+					th Unidad Medida
+					th Cantidad
+					th Precio
+					th Acciones
+			tbody
+				each item in trabajos
+					form(method="post" action="/menu/#{estimacions.id}" style="margin-top:1.5em;")
+						tr
+							td=item.clave
+								input(type="hidden" name="clave" placeholder="Numero de clave" class="form-control" value="#{item.clave}")
+							td=item.tipo_trabajo
+							td=item.descripcion
+								input(type="hidden" name="descripcion" placeholder="descripcion" class="form-control" value="#{item.descripcion}")
+							td=item.unidad_medida
+								input(type="hidden" name="unidad_medida" placeholder="Unidad de medida" class="form-control" value="#{item.unidad_medida}")
+							td
+								input(type="text" name="cantidad_planificada" placeholder="cantidad" class="form-control")
+							td=item.precio
+								input(type="hidden" name="precio" placeholder="$" class="form-control" value="#{item.precio}")
+							td
+								input(type="submit" class="btn btn-info" value="Agregar")
+		script(type='text/javascript' src='/js/buscar.js')

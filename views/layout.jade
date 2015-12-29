@@ -1,0 +1,55 @@
+doctype html
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		title Sce-Packs
+		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+		link(href='https://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css')
+		link(rel="stylesheet" href="/css/main.css")
+		link(rel="stylesheet" href="/css/animate.css")
+	body
+		div(class="navbar navbar-inverse navbar-fixed-top")
+			div(class="container-fluid")
+				div(class="navbar-header")
+					button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
+						span(class="icon-bar")
+						span(class="icon-bar")
+						span(class="icon-bar")
+					a(class="navbar-brand" href="#modal1" data-toggle="modal") Sce-Packs
+					
+				div(class="collapse navbar-collapse")
+					ul(class="nav navbar-nav navbar-right")
+						li(class="active")
+							a(href="/") Inicio
+						li
+							a(href="/admincontratistas") Login Contratista
+						li
+							a(href="/menu/crear") Crear
+		div(class="modal fade" id="modal1")
+						div(class="modal-dialog")
+							div(class="modal-content centro")
+								div(class="modal-header")
+									button(tyle="button" class="close" data-dismiss="modal" aria-hidden="true")&times;
+									h2(class="modal-title") Sce Packs
+								div(class="modal-body")
+									img(src="img/logo.png" class="retraso1 animated pulse t" width="205" height="140")
+									br
+									br
+									p Es un Proyecto de Sotfware Para la Creación de Estimaciones, creado con tecnologias de Codigo Abierto (Open Source) como: Back-end (MongoDB, Express, NodeJs, y Programación en Javascript), Front-end (HTML5, CSS3, Jade, Animate y el Framework Bootstrap) se encuentra en su Estado Funcional y de facil utilización, con una interfaz amigable al usuario de diseño responsivo, adaptable a cualquier dispositivo conectado a la internet.
+								div(class="modal-body")
+									p Contacto
+									a(href="mailto:direccion@correo.com" class="none") Escribenos: dtorres2926@gmail.com
+									p Telefono: +52 9241110369
+								div(class="modal-body")
+									h5 By: Dan Torres
+								div(class="modal-footer")
+									button(tyle="button" class="btn btn-prymary" data-dismiss="modal") Cerrar
+
+
+
+		script(src="http://code.jquery.com/jquery-latest.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+		block contenido
