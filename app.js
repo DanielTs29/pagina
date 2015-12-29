@@ -9,6 +9,7 @@ var logger= require('morgan');
 var fs = require('fs');
 var app = express();
 var method_override = require("method-override");
+var http = requite("http");
 
 
 /*conectado a mongo db*/
@@ -664,4 +665,5 @@ app.use(express.static(__dirname + "/public"));
 
 
 //escuchando el servidor en el puerto 3000
-app.listen(3000);	
+var server = http.createServer(app);
+server.listen(3000);	
