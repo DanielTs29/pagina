@@ -14,7 +14,7 @@
     "morgan": "^1.6.1",
     "pdfkit": "^0.7.1",
     "uglify-js": "^2.6.1"
-  }
+  },
   "license": "MIT"
 }
 
