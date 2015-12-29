@@ -9,7 +9,7 @@ var logger= require('morgan');
 var fs = require('fs');
 var app = express();
 var method_override = require("method-override");
-var http = requite("http");
+var http = require("http");
 
 
 /*conectado a mongo db*/
