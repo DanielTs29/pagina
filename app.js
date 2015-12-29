@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var method_override = require("method-override");
 var mongoose = require("mongoose");
+var PDFDocument = require('pdfkit');
+var fs = require('fs');
 
 var app = express();
 
