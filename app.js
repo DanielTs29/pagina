@@ -11,7 +11,7 @@ var fs = require('fs');
 
 var app = express();
 
-mongoose.connect('mongodb://admin:12345@ds037195.mongolab.com:37195/estimaciones');
+mongoose.connect('mongodb://root:ascii@ds037195.mongolab.com:37195/estimaciones');
 //mongoose.connect("mongodb://localhost/estimaciones");
 
 // view engine setup
