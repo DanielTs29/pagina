@@ -12,7 +12,7 @@ var method_override = require("method-override");
 
 
 /*conectado a mongo db*/
- mongoose.connect("mongodb://root:ascii2629@ds037195.mongolab.com:37195/estimaciones");
+mongoose.connect('mongodb://admin:12345@ds037195.mongolab.com:37195/estimaciones');
 //mongoose.connect("mongodb://localhost/estimaciones");
 
 //recuperando datos
