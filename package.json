@@ -16,7 +16,8 @@
     "morgan": "~1.6.1",
     "multer": "^1.1.0",
     "node-sass-middleware": "0.8.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "pdfkit": "^0.7.2"
   }
 }
 
