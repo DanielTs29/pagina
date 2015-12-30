@@ -504,7 +504,6 @@ app.use(express.static(__dirname + "/public"));
     
     //crecion del pdf
     doc.pipe(fs.createWriteStream(__dirname + '/public/output.pdf'));
-    doc.image('public/img/logo.png',150, 270, {width: 300, height:200}).text('');
     
     doc.lineWidth(1);
     
